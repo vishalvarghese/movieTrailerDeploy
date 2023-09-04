@@ -1,10 +1,7 @@
 import axios from '../../axios';
 import React,{useEffect,useState} from 'react'
 import YouTube from 'react-youtube';
-
 import './RowPost.css';
-
-
 import {API_KEY, imageUrl} from '../../constants/constants'
 function RowPost(props) {
   const[movies,setMovies] = useState([])
