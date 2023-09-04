@@ -16,7 +16,7 @@ axios.get(props.url).then((response)=>{
 }).catch(err=>{
  // alert('network error')
 })
-  }, [])
+  }, [props.url])
 
   const opts = {
     height: '390',
@@ -30,7 +30,7 @@ axios.get(props.url).then((response)=>{
 console.log(id);
 axios.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
   console.log(response.data);
-  if(response.data.results.length!=0)
+  if(response.data.results.length!==0)
   {
     setUrlId(response.data.results[0])
   }
